@@ -22,13 +22,5 @@ The dataset will be used to train the perceptron model.
 
 • Initialize and train the perceptron model using the training set. 
 
-Make sure your GUI have the following:
 
-• Allow the user to enter the data dynamically
-
-• Allow the user to enter the learning rate, maximum number of epochs, goal.
-
-• Show the system performance and accuracy.
-
-• Allow the user to test the model by entering an out of sample data.
 
