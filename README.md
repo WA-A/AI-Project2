@@ -16,7 +16,7 @@ The dataset will be used to train the perceptron model.
 ![image](https://github.com/WA-A/AI-Project2/assets/108180628/6e1d4e90-e810-4dd4-be6e-031494670f17)
 
 
-3. Train the Perceptron
+2. Train the Perceptron
 • Split the dataset into training and testing sets.
 
 • Initialize and train the perceptron model using the training set. 
