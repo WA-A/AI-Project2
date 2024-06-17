@@ -17,6 +17,7 @@ The dataset will be used to train the perceptron model.
 
 
 2. Train the Perceptron
+   
 • Split the dataset into training and testing sets.
 
 • Initialize and train the perceptron model using the training set. 
