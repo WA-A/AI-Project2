@@ -13,9 +13,9 @@ public class GUI extends JFrame {
     File testDataFile;
 
     public GUI() {
-        super("Perceptron Training GUI");
+        super("Perceptron Training & Testing GUI");
        //setBackground(new Color(246, 182, 182));
-        setLayout(new GridLayout(8, 4, 10, 10)); // Example grid layout
+        setLayout(new GridLayout(8, 4, 10, 10));
 
         setSize(800, 500);
 
@@ -28,58 +28,66 @@ public class GUI extends JFrame {
 
         trainButton = new JButton("Train Model");
         trainButton.setBackground(new Color(246, 182, 182));
-        trainButton.setFont(new Font("Arial", Font.ITALIC, 20));
+        trainButton.setFont(new Font("Serif", Font.ITALIC, 20));
 
         testButton = new JButton("Test Model");
         testButton.setBackground(new Color(246, 182, 182));
-        testButton.setFont(new Font("Arial", Font.ITALIC, 20));
+        testButton.setFont(new Font("Serif", Font.ITALIC, 20));
 
         selectTrainDataButton = new JButton("Select Training Data");
         selectTrainDataButton.setBackground(new Color(246, 182, 182));
-        selectTrainDataButton.setFont(new Font("Arial", Font.ITALIC, 20));
+        selectTrainDataButton.setFont(new Font("Serif", Font.ITALIC, 20));
 
 
         selectTestDataButton = new JButton("Select Testing Data");
         selectTestDataButton.setBackground(new Color(246, 182, 182));
-        selectTestDataButton.setFont(new Font("Arial", Font.ITALIC, 20));
+        selectTestDataButton.setFont(new Font("Serif", Font.ITALIC, 20));
 
 
         trainResultsLabel = new JLabel("Training Results: ");
-        trainResultsLabel.setFont(new Font("Font Name", Font.ITALIC, 20));
+        trainResultsLabel.setFont(new Font("Serif", Font.ITALIC, 20));
 
         testResultsLabel = new JLabel("Testing Results: ");
-        testResultsLabel.setFont(new Font("Font Name", Font.ITALIC, 20));
+        testResultsLabel.setFont(new Font("Serif", Font.ITALIC, 20));
 
 
         mseTrainLabel = new JLabel("Mean Squared Error: ");
-        mseTrainLabel.setFont(new Font("Font Name", Font.ITALIC, 20));
+        mseTrainLabel.setFont(new Font("Serif", Font.ITALIC, 20));
 
 
         mseTestLabel = new JLabel("Mean Squared Error: ");
-        mseTestLabel.setFont(new Font("Font Name", Font.ITALIC, 20));
+        mseTestLabel.setFont(new Font("Serif", Font.ITALIC, 20));
 
 
         fileChooser = new JFileChooser();
 
-        add(new JLabel("Learning Rate:")).setForeground(new Color(0, 0, 128));
-        setFont(new Font("Font Name", Font.ITALIC, 20));
-        add(learningRateField);
+        JLabel learningRateLabel = new JLabel("Learning Rate:");
+        learningRateLabel.setForeground(new Color(0, 0, 128));
+        learningRateLabel.setFont(new Font("Serif", Font.ITALIC, 20));
+        add(learningRateLabel);
+        add(learningRateField).setFont(new Font("", Font.ITALIC, 20));
 
 
-        add(new JLabel("Number of Epochs:")).setForeground(new Color(0, 0, 128));
-        add(epochsField);
+        JLabel NumberofEpochs = new JLabel("Number of Epochs:");
+        NumberofEpochs.setForeground(new Color(0, 0, 128));
+        NumberofEpochs.setFont(new Font("Serif", Font.ITALIC, 20));
+        add(NumberofEpochs);
+        add(epochsField).setFont(new Font("Serif", Font.ITALIC, 20));
 
-        add(new JLabel("Goal Accuracy:")).setForeground(new Color(0, 0, 128));
-        add(goalAccuracyField);
+        JLabel GoalAccuracy = new JLabel("Goal Accuracy:");
+        GoalAccuracy.setForeground(new Color(0, 0, 128));
+        GoalAccuracy.setFont(new Font("Serif", Font.ITALIC, 20));
+        add(GoalAccuracy);
+        add(goalAccuracyField).setFont(new Font("Serif", Font.ITALIC, 20));
 
         add(selectTrainDataButton).setForeground(new Color(0, 0, 128));
         add(trainButton).setForeground(new Color(0, 0, 128));
         add(trainResultsLabel).setForeground(new Color(0, 0, 128));
-        add(mseTrainLabel).setForeground(new Color(0, 0, 128)); // Added MSE label
+        add(mseTrainLabel).setForeground(new Color(0, 0, 128)); // Added MSE TRAIN label
         add(selectTestDataButton).setForeground(new Color(0, 0, 128));
         add(testButton).setForeground(new Color(0, 0, 128));
         add(testResultsLabel).setForeground(new Color(0, 0, 128));
-        add(mseTestLabel).setForeground(new Color(0, 0, 128)); // Added MSE label
+        add(mseTestLabel).setForeground(new Color(0, 0, 128)); // Added MSE TEST label
 
         int numberOfFeatures = 3;
 

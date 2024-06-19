@@ -27,14 +27,14 @@ public class Perceptron {
 
     private void initializeWeights() {
 
-//        for (int i = 0; i < weights.length; i++) {
-//            weights[i] = Math.random() * 0.01;
-//
-//        }
-        weights[0]=.1;
-        weights[1]= -.1;
-        weights[2]=.1;
-        weights[3]=.1;
+        for (int i = 0; i < weights.length; i++) {
+            weights[i] = Math.random() * 0.01;
+
+        }
+//        weights[0]=.1;
+//        weights[1]= -.1;
+//        weights[2]=.1;
+//        weights[3]=.1;
     }
 
 
@@ -119,7 +119,6 @@ public double getPerformance(){
     }
 
 
-
 //    private double predictTest(Double[] features) {
 //        double sum = weights[0]; // (weights[0] is the bias)
 //        for (int i = 1; i < weights.length; i++) {
@@ -131,6 +130,7 @@ public double getPerformance(){
 //        }
 //        return sum >= 0 ? 1.0 : 0.0;
 //    }
+
 
     private void updateWeights(Double[] features, double error) {
         double err = error;
